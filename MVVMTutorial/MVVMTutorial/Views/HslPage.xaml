@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMTutorial.Views.HslPage">
+
+    <StackLayout BackgroundColor="#f3f4f6" Padding="10, 10">
+        <BoxView Margin="10,10" Color="{Binding Color}"
+                 VerticalOptions="FillAndExpand" />
+
+        <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}"
+               HorizontalOptions="Center" />
+
+        <Slider Value="{Binding Hue, Mode=TwoWay}" BackgroundColor="#0f172a" />
+
+        <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}"
+               HorizontalOptions="Center" />
+
+        <Slider Value="{Binding Saturation, Mode=TwoWay}" BackgroundColor="#0f172a"/>
+
+        <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}"
+               HorizontalOptions="Center" />
+
+        <Slider Value="{Binding Luminosity, Mode=TwoWay}" BackgroundColor="#0f172a"/>
+    </StackLayout>
+</ContentPage>

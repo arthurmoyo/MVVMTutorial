@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:MVVMTutorial.ViewModels" 
+             x:DataType="viewmodels:NewTrainingCourseViewModel"
+             x:Class="MVVMTutorial.Views.NewTrainingCoursePage" 
+             Shell.PresentationMode="ModalAnimated">
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Name" FontSize="Medium" />
+            <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Presented By" FontSize="Medium" />
+            <Editor Text="{Binding PresentedBy, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Label Text="Presentation Date" FontSize="Medium" />
+            <DatePicker Date="{Binding Date, Mode=TwoWay}" MinimumDate="{Binding MinDate}" MaximumDate="{Binding MaxDate}" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Save" Command="{Binding SaveNewTrainingCourseCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
