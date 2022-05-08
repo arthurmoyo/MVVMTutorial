@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MVVMTutorial.ViewModels;
+﻿using MVVMTutorial.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +12,7 @@ namespace MVVMTutorial.Views
         public TrainingCourseListPage()
         {
             InitializeComponent();
-            BindingContext = _viewModel =new TrainingCourseListViewModel();
+            BindingContext = _viewModel = new TrainingCourseListViewModel();
         }
 
         protected override void OnAppearing()

@@ -10,6 +10,7 @@ namespace MVVMTutorial.ViewModels
     {
         public NewTrainingCourseViewModel()
         {
+            Title = "Create new training course";
             SaveNewTrainingCourseCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
             this.PropertyChanged +=
@@ -58,6 +59,7 @@ namespace MVVMTutorial.ViewModels
             }
         }
 
+        public string Title { get; }
         public Command SaveNewTrainingCourseCommand { get; }
         public Command CancelCommand { get; }
 

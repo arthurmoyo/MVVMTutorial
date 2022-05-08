@@ -4,6 +4,7 @@
              xmlns:viewmodels="clr-namespace:MVVMTutorial.ViewModels" 
              x:DataType="viewmodels:NewTrainingCourseViewModel"
              x:Class="MVVMTutorial.Views.NewTrainingCoursePage" 
+             Title="{Binding Title}"
              Shell.PresentationMode="ModalAnimated">
     
     <ContentPage.Content>

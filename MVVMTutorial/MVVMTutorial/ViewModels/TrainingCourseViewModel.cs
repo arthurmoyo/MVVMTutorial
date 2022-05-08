@@ -36,8 +36,6 @@ namespace MVVMTutorial.ViewModels
             }
         }
 
-
-
         public DateTime Date
         {
             get => date;
