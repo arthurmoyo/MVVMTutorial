@@ -14,7 +14,6 @@ namespace MVVMTutorial
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             DependencyService.Register<IDataStore<TrainingCourse>,MockTrainingCourseDataStore>();
             MainPage = new AppShell();
         }

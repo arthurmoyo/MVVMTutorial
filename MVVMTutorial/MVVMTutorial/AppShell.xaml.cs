@@ -11,8 +11,6 @@ namespace MVVMTutorial
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(HslPage), typeof(HslPage));
             Routing.RegisterRoute(nameof(TrainingCourseListPage), typeof(TrainingCourseListPage));
             Routing.RegisterRoute(nameof(NewTrainingCoursePage), typeof(NewTrainingCoursePage));
