@@ -17,8 +17,15 @@ namespace MVVMTutorial.Services
                 {
                     Id = Guid.NewGuid().ToString(),
                     Name = "UI Patterns - MVVM in depth",
-                    Date = new DateTime(2022,05,11),
+                    Date = new DateTime(2022,05,18),
                     PresentedBy = "Arthur Moyo"
+                },
+                new TrainingCourse()
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "Introduction to Dynamics",
+                    Date = new DateTime(2022, 06, 1),
+                    PresentedBy = "Anene Britz"
                 }
             };
         }
@@ -43,7 +50,7 @@ namespace MVVMTutorial.Services
 
         public async Task<IEnumerable<TrainingCourse>> GetAllAsync(bool forceRefresh = false)
         {
-            return await Task.FromResult(trainingCourseList);
+            return await Task.FromResult(trainingCourseList.OrderBy(x => x.Date));
         }
 
         public async Task<bool> UpdateAsync(TrainingCourse item)

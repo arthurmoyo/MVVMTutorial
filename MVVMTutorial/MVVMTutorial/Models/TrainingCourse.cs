@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MVVMTutorial.Models
 {
@@ -8,9 +6,8 @@ namespace MVVMTutorial.Models
     {
         public string Id { get; set; }
         public string Name { get; set; }
-
         public string PresentedBy { get; set; }
-
         public DateTime Date { get; set; }
     }
 }
+
